@@ -1,0 +1,21 @@
+info:
+  contact: {}
+paths:
+  /houses/parse:
+    get:
+      description: Запустить процесс принудительного обновления данных по таблицам
+        загородных домов
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+      tags:
+      - Houses
+swagger: "2.0"

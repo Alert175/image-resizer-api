@@ -1,0 +1,6 @@
+vendor
+logs/*.log
+tmp
+config/.env
+cmd/*.xml
+volume_db

@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  # server:
+  #   restart: always
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   env_file: ./config/.env
+  #   depends_on:
+  #     - database
+  #   networks:
+  #     - default
+  #   ports:
+  #     - "8009:8009"
+  #   volumes:
+  #     - ./logs:/app/logs
+  database:
+    image: postgres:14-alpine
+    restart: always
+    env_file:
+      - ./config/.env
+    ports:
+      - "12015:5432"
+    volumes:
+      - ./volume_db:/var/lib/postgresql/data
+volumes:
+  data:
+  logs:
